@@ -1,0 +1,116 @@
+@import "variables";
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: $font-family-sf-pro-regular;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	color: $color-text-primary;
+	background: $color-background;
+}
+
+p {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+li {
+	color: $color-primary;
+}
+
+.link {
+	text-decoration: underline;
+	font-family: $font-family-sf-pro-semi-bold;
+	font-size: 16px;
+	line-height: 20px;
+	color: $color-primary;
+	cursor: pointer;
+}
+
+.container {
+	width: 100%;
+	max-width: 279px;
+	margin: auto;
+}
+
+button {
+	font-family: $font-family-sf-pro-semi-bold;
+	min-height: 40px;
+	padding: 16px 0;
+	font-size: 16px;
+	line-height: 20px;
+	color: $color-text-tertiary;
+	background-color: $color-button;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+
+//button:hover {
+//	background-color: $color-primary;
+//	color: #ffffff;
+//}
+
+input {
+	font-size: 16px;
+	line-height: 18px;
+	font-family: $font-family-sf-pro-regular;
+	color: $color-text-tertiary;
+	padding: 0 0 8px 0;
+	border: 0 solid $color-background;
+	border-bottom: 1px solid $color-icon-line;
+	outline: none;
+	margin-bottom: 16px;
+	border-radius: 0;
+}
+
+input::placeholder {
+	color: rgba(36, 42, 53, 0.3);
+}
+
+select {
+	font-size: 16px;
+	line-height: 18px;
+	font-family: $font-family-sf-pro-regular;
+	color: $color-text-tertiary;
+	padding: 0 0 8px 0;
+	border: 0 solid $color-background;
+	border-bottom: 1px solid $color-icon-line;
+	outline: none;
+	margin-bottom: 16px;
+	border-radius: 0;
+	background-color: $color-background;
+	cursor: pointer;
+	//opacity: 0.5;
+}
+
+[data-tooltip]::after {
+	content: attr(data-tooltip); /* Выводим текст */
+	opacity: 0;
+	pointer-events: none;
+	transition: 1s;
+	font-size: 14px;
+	line-height: 16px;
+	color: rgba(36, 42, 53, 0.5);
+	position: absolute;
+	top: 25px;
+	left: 15px;
+	z-index: 100;
+}
+
+[data-tooltip]:hover::after {
+	opacity: 1;
+}

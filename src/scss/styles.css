@@ -1,0 +1,137 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "SFProRegular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #062923;
+  background: #fff;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+li {
+  color: #35B287;
+}
+
+.link {
+  text-decoration: underline;
+  font-family: "SFProSemiBold", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #35B287;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 279px;
+  margin: auto;
+}
+
+button {
+  font-family: "SFProSemiBold", sans-serif;
+  min-height: 40px;
+  padding: 16px 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: #93A2A0;
+  background-color: #F4F8F7;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+input {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "SFProRegular", sans-serif;
+  color: #93A2A0;
+  padding: 0 0 8px 0;
+  border: 0 solid #fff;
+  border-bottom: 1px solid #C5CECB;
+  outline: none;
+  margin-bottom: 16px;
+  border-radius: 0;
+}
+
+input::placeholder {
+  color: rgba(36, 42, 53, 0.3);
+}
+
+select {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "SFProRegular", sans-serif;
+  color: #93A2A0;
+  padding: 0 0 8px 0;
+  border: 0 solid #fff;
+  border-bottom: 1px solid #C5CECB;
+  outline: none;
+  margin-bottom: 16px;
+  border-radius: 0;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  /* Выводим текст */
+  opacity: 0;
+  pointer-events: none;
+  transition: 1s;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(36, 42, 53, 0.5);
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  z-index: 100;
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+}
+
+@font-face {
+  font-family: "SFProRegular", sans-serif;
+  src: url("@/assets/fonts/SF-Pro-Regular.woff") format("woff"), url("@/assets/fonts/SF-Pro-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SFProMedium", sans-serif;
+  src: url("@/assets/fonts/SF-Pro-Medium.woff") format("woff"), url("@/assets/fonts/SF-Pro-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "SFProSemiBold", sans-serif;
+  src: url("@/assets/fonts/SF-Pro-Semibold.woff") format("woff"), url("@/assets/fonts/SF-Pro-Semibold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "SFProBold", sans-serif;
+  src: url("@/assets/fonts/SF-Pro-Bold.woff") format("woff"), url("@/assets/fonts/SF-Pro-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=styles.css.map */
